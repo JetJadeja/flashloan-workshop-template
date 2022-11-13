@@ -26,7 +26,8 @@ contract FlashLender {
     //////////////////////////////////////////////////////////////*/
 
     /// @notice Set up the flash lender contract.
-    constructor(ERC20 _TOKEN) {
+    /// The uint256 parameter is only there to ensure that compilation is succesful for the test contracts.
+    constructor(ERC20 _TOKEN, uint256) {
         // Set our token to the correct ERC20 address.
         TOKEN = _TOKEN;
     } 
