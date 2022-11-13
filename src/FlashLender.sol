@@ -9,7 +9,7 @@ import "solmate/tokens/ERC20.sol";
 import "solmate/utils/SafeTransferLib.sol";
 
 /// @title Simple Flash Lender
-/// @author Jet Jadeja <jet@pentagon.xyz>
+/// @author YOUR NAME HERE
 /// @notice Simple flash lender contract that allows liquidity providers to deposit and withdraw funds.
 contract FlashLender {
     using SafeTransferLib for ERC20;
