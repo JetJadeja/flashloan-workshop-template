@@ -9,16 +9,15 @@
 // import "solmate/tokens/ERC20.sol";
 
 // import {DSTestPlus} from "solmate/test/utils/DSTestPlus.sol";
-// import "forge-std/console.sol";
 
 
-// contract AdvancedFlashLenderTest is DSTestPlus {
+// contract IntermediateTests is DSTestPlus {
 //     IFlashLender lender;
 //     MockERC20 token;
 
 //     function setUp() public {
 //         token = new MockERC20("Test Token", "TEST", 18);
-//         lender = IFlashLender(address(new FlashLender(ERC20(address(token)), 0.05e18)));
+//         lender = IFlashLender(address(new FlashLender(ERC20(address(token)), 0.05e18))); // 5% fee
 
 //         token.mint(address(this), 1000 ether);
 //     }
@@ -26,35 +25,11 @@
 //     function testDeposit() public {
 //         token.approve(address(lender), 1000 ether);
 //         lender.deposit(1000 ether);
-
-//         require(lender.balanceOf(address(this)) == 1000 ether);
-//         require(lender.balanceOfUnderlying(address(this)) == 1000 ether);
 //     }
 
 //     function testWithdraw() public {
 //         testDeposit();
 //         lender.withdraw(1000 ether);
-
-//         require(lender.balanceOf(address(this)) == 0);
-//         require(lender.balanceOfUnderlying(address(this)) == 0 ether);
-//     }
-
-//     function testBalanceIncrease() public {
-//         // Execute a flash loan and pay the 5% fee.
-//         testDeposit();
-
-//         GoodBorrower borrower = new GoodBorrower();
-//         token.mint(address(borrower), 50 ether);
-//         lender.borrow(1000 ether, IFlashBorrower(address(borrower)));
-
-
-//         // The balance of the lender should have increased by 5%.
-//         console.log(lender.balanceOfUnderlying(address(this)));
-//         console.log(lender.sharePrice());
-//         console.log(token.balanceOf(address(lender)), lender.totalSupply());
-//         console.log((token.balanceOf(address(lender)) * 1e18) / lender.totalSupply());
-
-//         require(lender.balanceOfUnderlying(address(this)) == 1050 ether, "Value");
 //     }
 
 //     function testLoan() public {
@@ -94,6 +69,11 @@
 //         MistakenBorrower borrower = new MistakenBorrower();
 //         token.mint(address(borrower), 50 ether);
 //         lender.borrow(1000 ether, IFlashBorrower(address(borrower)));
+//     }
+
+//     function testWithdrawFees() public {
+//         testLoanSuccess();
+//         lender.collectFees();
 //     }
 // }
 

@@ -11,7 +11,7 @@ import "solmate/utils/SafeTransferLib.sol";
 /// @title Simple Flash Lender
 /// @author Jet Jadeja <jet@pentagon.xyz>
 /// @notice Simple flash lender contract that allows liquidity providers to deposit and withdraw funds.
-contract SimpleFlashLender {
+contract FlashLender {
     using SafeTransferLib for ERC20;
 
     /*///////////////////////////////////////////////////////////////
@@ -37,17 +37,6 @@ contract SimpleFlashLender {
 
     /// @notice Borrow funds from the flash lender contract.
     function borrow(uint256 amount, IFlashBorrower borrower) external {
-        // Store the current balance of the contract.
-        uint256 balance = TOKEN.balanceOf(address(this));
 
-        // Transfer the tokens from the contract to the borrower.
-        TOKEN.safeTransfer(address(borrower), amount);
-
-
-        // Call the borrower's executeOnFlashLoan function.
-        borrower.executeOnFlashLoan(TOKEN, amount, amount);
-
-        // Ensure that the tokens have been returned to the contract.
-        require(TOKEN.balanceOf(address(this)) >= balance, "Borrower did not return funds");
     }
 }
