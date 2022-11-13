@@ -1,0 +1,2944 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ERC20",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "executeOnFlashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061015c806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806321c77fd214610030575b600080fd5b61004361003e3660046100bc565b610045565b005b60405163a9059cbb60e01b8152336004820152602481018390526001600160a01b0384169063a9059cbb906044016020604051808303816000875af1158015610092573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100b691906100fd565b50505050565b6000806000606084860312156100d157600080fd5b83356001600160a01b03811681146100e857600080fd5b95602085013595506040909401359392505050565b60006020828403121561010f57600080fd5b8151801515811461011f57600080fd5b939250505056fea2646970667358221220f6ede45f0adb51922fecfccc8872f608df98d903d4b623430b6f59398437e3ce64736f6c63430008110033",
+    "sourceMap": "1304:156:26:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806321c77fd214610030575b600080fd5b61004361003e3660046100bc565b610045565b005b60405163a9059cbb60e01b8152336004820152602481018390526001600160a01b0384169063a9059cbb906044016020604051808303816000875af1158015610092573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100b691906100fd565b50505050565b6000806000606084860312156100d157600080fd5b83356001600160a01b03811681146100e857600080fd5b95602085013595506040909401359392505050565b60006020828403121561010f57600080fd5b8151801515811461011f57600080fd5b939250505056fea2646970667358221220f6ede45f0adb51922fecfccc8872f608df98d903d4b623430b6f59398437e3ce64736f6c63430008110033",
+    "sourceMap": "1304:156:26:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1332:126;;;;;;:::i;:::-;;:::i;:::-;;;1417:34;;-1:-1:-1;;;1417:34:26;;1432:10;1417:34;;;630:51:27;697:18;;;690:34;;;-1:-1:-1;;;;;1417:14:26;;;;;603:18:27;;1417:34:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1332:126;;;:::o;14:437:27:-;106:6;114;122;175:2;163:9;154:7;150:23;146:32;143:52;;;191:1;188;181:12;143:52;217:23;;-1:-1:-1;;;;;269:31:27;;259:42;;249:70;;315:1;312;305:12;249:70;338:5;390:2;375:18;;362:32;;-1:-1:-1;441:2:27;426:18;;;413:32;;14:437;-1:-1:-1;;;14:437:27:o;735:277::-;802:6;855:2;843:9;834:7;830:23;826:32;823:52;;;871:1;868;861:12;823:52;903:9;897:16;956:5;949:13;942:21;935:5;932:32;922:60;;978:1;975;968:12;922:60;1001:5;735:277;-1:-1:-1;;;735:277:27:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "executeOnFlashLoan(address,uint256,uint256)": "21c77fd2"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ERC20\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"executeOnFlashLoan\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/SimpleFlashLender.t.sol\":\"GoodBorrower\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/forge-std/lib/ds-test/src/test.sol\":{\"keccak256\":\"0xb39cd1d5220cb474947b131e15a4538334b7e886af244b440ae5c9c6bba96a54\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://3101520221449ac0070bda3881311a71d9aa87e5210765e875246922cb5cb5f5\",\"dweb:/ipfs/Qmbg6kAHNoG7ox9N9Xqd9Ere2H2XixMFWFqvyPwFCzB3Gr\"]},\"lib/solmate/src/test/utils/DSTestPlus.sol\":{\"keccak256\":\"0xfb14a34ee4ea94482e85104045666568a0ede90ee357278b34a52fbf0128db44\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://ecfb0c93cefa9cba19b32d4ff0d617bd0d70ce41c4b3e882f9f64cb03352cc45\",\"dweb:/ipfs/QmXt9SWVMLZc1CKjgFKbh4m71uG39rNab6UyY7HNZ3DHkX\"]},\"lib/solmate/src/test/utils/Hevm.sol\":{\"keccak256\":\"0x5914facc79358d57f3a0bec95908271b4f89a8abeb05bbea2dddb6a7e3c79c25\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://103a150bec6b6fcfb66ec6a2cef66fc26201bc1810e10cc359f4b673c4027c19\",\"dweb:/ipfs/QmZcM7ER16WeE1zYCtHqBfRZqqYm7ThLEC8Lgw2PAoAUVU\"]},\"lib/solmate/src/test/utils/mocks/MockERC20.sol\":{\"keccak256\":\"0x525129ccb4103c9ecb8f235618d2ff4a8ffde4b8654f7c17766ad175d10ef466\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://45692a21807ba815c0cf0bfc7d633a14a6cb9ba863ab53f18fc639375a72125e\",\"dweb:/ipfs/QmSrqxyodjDtSU1Dc6G3ScnNc9CFjMnAeHpK8a8guM3nJu\"]},\"lib/solmate/src/tokens/ERC20.sol\":{\"keccak256\":\"0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://57b3ab70cde374af1cf2c9888636e8de6cf660f087b1c9abd805e9271e19fa35\",\"dweb:/ipfs/QmNrLDBAHYFjpjSd12jerm1AdBkDqEYUUaXgnT854BUZ97\"]},\"lib/solmate/src/utils/SafeTransferLib.sol\":{\"keccak256\":\"0xbadf3d708cf532b12f75f78a1d423135954b63774a6d4ba15914a551d348db8a\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://88ac8256bd520d1b8e6f9c4ac9e8777bffdc4a6c8afb1a848f596665779a55b4\",\"dweb:/ipfs/QmXx7X1dxe6f5VM91vgQ5BA4r2eF97GWDcQDrgHytcvfjU\"]},\"src/SimpleFlashLender.sol\":{\"keccak256\":\"0x7d12785374d551163f43cd4cef65c610e4d2f533cd5d45800ee4c26c54bf5dfc\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://2c2d6e7d4214bd3af6ecd965a552351c114654d2aa6726f3850e850307b9f7fb\",\"dweb:/ipfs/QmW3rvavibznKVYRZ6GTJfFx9ywEunQ8dhRdKCA2boBzQM\"]},\"src/interfaces/IFlashBorrower.sol\":{\"keccak256\":\"0xec387cb9f8cc545e0f52102c2a0f5a84d036da3557b2eb3f9e4b29558d9ecaa9\",\"urls\":[\"bzz-raw://2bf90b4e9abb1cd99788e710eef3f35733ee389c5d5dbc5a28fcf6f650db698a\",\"dweb:/ipfs/QmSkEfZwuR6Byk5oUdw6dCoJMZawFDwUMKe2nhiroJzhnS\"]},\"test/SimpleFlashLender.t.sol\":{\"keccak256\":\"0xfc7e223d12fb112f39ba9adeb9975dfdc50851f7cd11a3f339d677f88c3984d7\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://1200f35edbac054143ee5acaab87cfd895bf8cad1ada61cd8a762968aac74495\",\"dweb:/ipfs/QmZ57wTtFmfrKx6imqjvxQMXCA5CYENoYrdJnk2oAhLqW7\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract ERC20",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "executeOnFlashLoan"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/SimpleFlashLender.t.sol": "GoodBorrower"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/forge-std/lib/ds-test/src/test.sol": {
+        "keccak256": "0xb39cd1d5220cb474947b131e15a4538334b7e886af244b440ae5c9c6bba96a54",
+        "urls": [
+          "bzz-raw://3101520221449ac0070bda3881311a71d9aa87e5210765e875246922cb5cb5f5",
+          "dweb:/ipfs/Qmbg6kAHNoG7ox9N9Xqd9Ere2H2XixMFWFqvyPwFCzB3Gr"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "lib/solmate/src/test/utils/DSTestPlus.sol": {
+        "keccak256": "0xfb14a34ee4ea94482e85104045666568a0ede90ee357278b34a52fbf0128db44",
+        "urls": [
+          "bzz-raw://ecfb0c93cefa9cba19b32d4ff0d617bd0d70ce41c4b3e882f9f64cb03352cc45",
+          "dweb:/ipfs/QmXt9SWVMLZc1CKjgFKbh4m71uG39rNab6UyY7HNZ3DHkX"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "lib/solmate/src/test/utils/Hevm.sol": {
+        "keccak256": "0x5914facc79358d57f3a0bec95908271b4f89a8abeb05bbea2dddb6a7e3c79c25",
+        "urls": [
+          "bzz-raw://103a150bec6b6fcfb66ec6a2cef66fc26201bc1810e10cc359f4b673c4027c19",
+          "dweb:/ipfs/QmZcM7ER16WeE1zYCtHqBfRZqqYm7ThLEC8Lgw2PAoAUVU"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "lib/solmate/src/test/utils/mocks/MockERC20.sol": {
+        "keccak256": "0x525129ccb4103c9ecb8f235618d2ff4a8ffde4b8654f7c17766ad175d10ef466",
+        "urls": [
+          "bzz-raw://45692a21807ba815c0cf0bfc7d633a14a6cb9ba863ab53f18fc639375a72125e",
+          "dweb:/ipfs/QmSrqxyodjDtSU1Dc6G3ScnNc9CFjMnAeHpK8a8guM3nJu"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "lib/solmate/src/tokens/ERC20.sol": {
+        "keccak256": "0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10",
+        "urls": [
+          "bzz-raw://57b3ab70cde374af1cf2c9888636e8de6cf660f087b1c9abd805e9271e19fa35",
+          "dweb:/ipfs/QmNrLDBAHYFjpjSd12jerm1AdBkDqEYUUaXgnT854BUZ97"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "lib/solmate/src/utils/SafeTransferLib.sol": {
+        "keccak256": "0xbadf3d708cf532b12f75f78a1d423135954b63774a6d4ba15914a551d348db8a",
+        "urls": [
+          "bzz-raw://88ac8256bd520d1b8e6f9c4ac9e8777bffdc4a6c8afb1a848f596665779a55b4",
+          "dweb:/ipfs/QmXx7X1dxe6f5VM91vgQ5BA4r2eF97GWDcQDrgHytcvfjU"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "src/SimpleFlashLender.sol": {
+        "keccak256": "0x7d12785374d551163f43cd4cef65c610e4d2f533cd5d45800ee4c26c54bf5dfc",
+        "urls": [
+          "bzz-raw://2c2d6e7d4214bd3af6ecd965a552351c114654d2aa6726f3850e850307b9f7fb",
+          "dweb:/ipfs/QmW3rvavibznKVYRZ6GTJfFx9ywEunQ8dhRdKCA2boBzQM"
+        ],
+        "license": "Unlicense"
+      },
+      "src/interfaces/IFlashBorrower.sol": {
+        "keccak256": "0xec387cb9f8cc545e0f52102c2a0f5a84d036da3557b2eb3f9e4b29558d9ecaa9",
+        "urls": [
+          "bzz-raw://2bf90b4e9abb1cd99788e710eef3f35733ee389c5d5dbc5a28fcf6f650db698a",
+          "dweb:/ipfs/QmSkEfZwuR6Byk5oUdw6dCoJMZawFDwUMKe2nhiroJzhnS"
+        ],
+        "license": null
+      },
+      "test/SimpleFlashLender.t.sol": {
+        "keccak256": "0xfc7e223d12fb112f39ba9adeb9975dfdc50851f7cd11a3f339d677f88c3984d7",
+        "urls": [
+          "bzz-raw://1200f35edbac054143ee5acaab87cfd895bf8cad1ada61cd8a762968aac74495",
+          "dweb:/ipfs/QmZ57wTtFmfrKx6imqjvxQMXCA5CYENoYrdJnk2oAhLqW7"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/SimpleFlashLender.t.sol",
+    "id": 27535,
+    "exportedSymbols": {
+      "BadBorrower": [
+        27512
+      ],
+      "DSTestPlus": [
+        25157
+      ],
+      "ERC20": [
+        25797
+      ],
+      "GoodBorrower": [
+        27492
+      ],
+      "IFlashBorrower": [
+        26467
+      ],
+      "MistakenBorrower": [
+        27534
+      ],
+      "MockERC20": [
+        25409
+      ],
+      "SafeTransferLib": [
+        25882
+      ],
+      "SimpleFlashLender": [
+        26451
+      ],
+      "SimpleFlashLenderTest": [
+        27472
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "38:1732:26",
+    "nodes": [
+      {
+        "id": 27324,
+        "nodeType": "PragmaDirective",
+        "src": "38:23:26",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 27325,
+        "nodeType": "ImportDirective",
+        "src": "63:35:26",
+        "nodes": [],
+        "absolutePath": "src/SimpleFlashLender.sol",
+        "file": "src/SimpleFlashLender.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 27535,
+        "sourceUnit": 26452,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 27326,
+        "nodeType": "ImportDirective",
+        "src": "99:43:26",
+        "nodes": [],
+        "absolutePath": "src/interfaces/IFlashBorrower.sol",
+        "file": "src/interfaces/IFlashBorrower.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 27535,
+        "sourceUnit": 26468,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 27327,
+        "nodeType": "ImportDirective",
+        "src": "144:48:26",
+        "nodes": [],
+        "absolutePath": "lib/solmate/src/test/utils/mocks/MockERC20.sol",
+        "file": "solmate/test/utils/mocks/MockERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 27535,
+        "sourceUnit": 25410,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 27328,
+        "nodeType": "ImportDirective",
+        "src": "193:34:26",
+        "nodes": [],
+        "absolutePath": "lib/solmate/src/tokens/ERC20.sol",
+        "file": "solmate/tokens/ERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 27535,
+        "sourceUnit": 25798,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 27330,
+        "nodeType": "ImportDirective",
+        "src": "229:61:26",
+        "nodes": [],
+        "absolutePath": "lib/solmate/src/test/utils/DSTestPlus.sol",
+        "file": "solmate/test/utils/DSTestPlus.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 27535,
+        "sourceUnit": 25158,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 27329,
+              "name": "DSTestPlus",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 25157,
+              "src": "237:10:26",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 27472,
+        "nodeType": "ContractDefinition",
+        "src": "293:1009:26",
+        "nodes": [
+          {
+            "id": 27335,
+            "nodeType": "VariableDeclaration",
+            "src": "344:24:26",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "lender",
+            "nameLocation": "362:6:26",
+            "scope": 27472,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+              "typeString": "contract SimpleFlashLender"
+            },
+            "typeName": {
+              "id": 27334,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 27333,
+                "name": "SimpleFlashLender",
+                "nameLocations": [
+                  "344:17:26"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 26451,
+                "src": "344:17:26"
+              },
+              "referencedDeclaration": 26451,
+              "src": "344:17:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                "typeString": "contract SimpleFlashLender"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 27338,
+            "nodeType": "VariableDeclaration",
+            "src": "374:15:26",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "token",
+            "nameLocation": "384:5:26",
+            "scope": 27472,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_MockERC20_$25409",
+              "typeString": "contract MockERC20"
+            },
+            "typeName": {
+              "id": 27337,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 27336,
+                "name": "MockERC20",
+                "nameLocations": [
+                  "374:9:26"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 25409,
+                "src": "374:9:26"
+              },
+              "referencedDeclaration": 25409,
+              "src": "374:9:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MockERC20_$25409",
+                "typeString": "contract MockERC20"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 27375,
+            "nodeType": "FunctionDefinition",
+            "src": "396:201:26",
+            "nodes": [],
+            "body": {
+              "id": 27374,
+              "nodeType": "Block",
+              "src": "420:177:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 27349,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 27341,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27338,
+                      "src": "430:5:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockERC20_$25409",
+                        "typeString": "contract MockERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "hexValue": "5465737420546f6b656e",
+                          "id": 27345,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "452:12:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_81e8ad438398ab0d4a2a7ecb159490c091bb27c67ace5181f70084e30fadaea2",
+                            "typeString": "literal_string \"Test Token\""
+                          },
+                          "value": "Test Token"
+                        },
+                        {
+                          "hexValue": "54455354",
+                          "id": 27346,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "466:6:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_852daa74cc3c31fe64542bb9b8764cfb91cc30f9acf9389071ffb44a9eefde46",
+                            "typeString": "literal_string \"TEST\""
+                          },
+                          "value": "TEST"
+                        },
+                        {
+                          "hexValue": "3138",
+                          "id": 27347,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "474:2:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_18_by_1",
+                            "typeString": "int_const 18"
+                          },
+                          "value": "18"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_81e8ad438398ab0d4a2a7ecb159490c091bb27c67ace5181f70084e30fadaea2",
+                            "typeString": "literal_string \"Test Token\""
+                          },
+                          {
+                            "typeIdentifier": "t_stringliteral_852daa74cc3c31fe64542bb9b8764cfb91cc30f9acf9389071ffb44a9eefde46",
+                            "typeString": "literal_string \"TEST\""
+                          },
+                          {
+                            "typeIdentifier": "t_rational_18_by_1",
+                            "typeString": "int_const 18"
+                          }
+                        ],
+                        "id": 27344,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "438:13:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint8_$returns$_t_contract$_MockERC20_$25409_$",
+                          "typeString": "function (string memory,string memory,uint8) returns (contract MockERC20)"
+                        },
+                        "typeName": {
+                          "id": 27343,
+                          "nodeType": "UserDefinedTypeName",
+                          "pathNode": {
+                            "id": 27342,
+                            "name": "MockERC20",
+                            "nameLocations": [
+                              "442:9:26"
+                            ],
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 25409,
+                            "src": "442:9:26"
+                          },
+                          "referencedDeclaration": 25409,
+                          "src": "442:9:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockERC20_$25409",
+                            "typeString": "contract MockERC20"
+                          }
+                        }
+                      },
+                      "id": 27348,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "438:39:26",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockERC20_$25409",
+                        "typeString": "contract MockERC20"
+                      }
+                    },
+                    "src": "430:47:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockERC20_$25409",
+                      "typeString": "contract MockERC20"
+                    }
+                  },
+                  "id": 27350,
+                  "nodeType": "ExpressionStatement",
+                  "src": "430:47:26"
+                },
+                {
+                  "expression": {
+                    "id": 27362,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 27351,
+                      "name": "lender",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27335,
+                      "src": "487:6:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                        "typeString": "contract SimpleFlashLender"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "id": 27358,
+                                  "name": "token",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 27338,
+                                  "src": "532:5:26",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_MockERC20_$25409",
+                                    "typeString": "contract MockERC20"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_contract$_MockERC20_$25409",
+                                    "typeString": "contract MockERC20"
+                                  }
+                                ],
+                                "id": 27357,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "524:7:26",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_address_$",
+                                  "typeString": "type(address)"
+                                },
+                                "typeName": {
+                                  "id": 27356,
+                                  "name": "address",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "524:7:26",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 27359,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "524:14:26",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 27355,
+                            "name": "ERC20",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 25797,
+                            "src": "518:5:26",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_ERC20_$25797_$",
+                              "typeString": "type(contract ERC20)"
+                            }
+                          },
+                          "id": 27360,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "518:21:26",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_ERC20_$25797",
+                            "typeString": "contract ERC20"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_ERC20_$25797",
+                            "typeString": "contract ERC20"
+                          }
+                        ],
+                        "id": 27354,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "496:21:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_ERC20_$25797_$returns$_t_contract$_SimpleFlashLender_$26451_$",
+                          "typeString": "function (contract ERC20) returns (contract SimpleFlashLender)"
+                        },
+                        "typeName": {
+                          "id": 27353,
+                          "nodeType": "UserDefinedTypeName",
+                          "pathNode": {
+                            "id": 27352,
+                            "name": "SimpleFlashLender",
+                            "nameLocations": [
+                              "500:17:26"
+                            ],
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 26451,
+                            "src": "500:17:26"
+                          },
+                          "referencedDeclaration": 26451,
+                          "src": "500:17:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                            "typeString": "contract SimpleFlashLender"
+                          }
+                        }
+                      },
+                      "id": 27361,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "496:44:26",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                        "typeString": "contract SimpleFlashLender"
+                      }
+                    },
+                    "src": "487:53:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                      "typeString": "contract SimpleFlashLender"
+                    }
+                  },
+                  "id": 27363,
+                  "nodeType": "ExpressionStatement",
+                  "src": "487:53:26"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 27369,
+                            "name": "lender",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 27335,
+                            "src": "570:6:26",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                              "typeString": "contract SimpleFlashLender"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                              "typeString": "contract SimpleFlashLender"
+                            }
+                          ],
+                          "id": 27368,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "562:7:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 27367,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "562:7:26",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 27370,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "562:15:26",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "hexValue": "31303030",
+                        "id": 27371,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "579:10:26",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        "value": "1000"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        }
+                      ],
+                      "expression": {
+                        "id": 27364,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27338,
+                        "src": "551:5:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_MockERC20_$25409",
+                          "typeString": "contract MockERC20"
+                        }
+                      },
+                      "id": 27366,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "557:4:26",
+                      "memberName": "mint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 25395,
+                      "src": "551:10:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256) external"
+                      }
+                    },
+                    "id": 27372,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "551:39:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 27373,
+                  "nodeType": "ExpressionStatement",
+                  "src": "551:39:26"
+                }
+              ]
+            },
+            "functionSelector": "0a9254e4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUp",
+            "nameLocation": "405:5:26",
+            "parameters": {
+              "id": 27339,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "410:2:26"
+            },
+            "returnParameters": {
+              "id": 27340,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "420:0:26"
+            },
+            "scope": 27472,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 27399,
+            "nodeType": "FunctionDefinition",
+            "src": "603:156:26",
+            "nodes": [],
+            "body": {
+              "id": 27398,
+              "nodeType": "Block",
+              "src": "630:129:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    27380
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 27380,
+                      "mutability": "mutable",
+                      "name": "borrower",
+                      "nameLocation": "653:8:26",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 27398,
+                      "src": "640:21:26",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                        "typeString": "contract GoodBorrower"
+                      },
+                      "typeName": {
+                        "id": 27379,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 27378,
+                          "name": "GoodBorrower",
+                          "nameLocations": [
+                            "640:12:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 27492,
+                          "src": "640:12:26"
+                        },
+                        "referencedDeclaration": 27492,
+                        "src": "640:12:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                          "typeString": "contract GoodBorrower"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 27385,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 27383,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "664:16:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_GoodBorrower_$27492_$",
+                        "typeString": "function () returns (contract GoodBorrower)"
+                      },
+                      "typeName": {
+                        "id": 27382,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 27381,
+                          "name": "GoodBorrower",
+                          "nameLocations": [
+                            "668:12:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 27492,
+                          "src": "668:12:26"
+                        },
+                        "referencedDeclaration": 27492,
+                        "src": "668:12:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                          "typeString": "contract GoodBorrower"
+                        }
+                      }
+                    },
+                    "id": 27384,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "664:18:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                      "typeString": "contract GoodBorrower"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "640:42:26"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "31303030",
+                        "id": 27389,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "706:10:26",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        "value": "1000"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "id": 27393,
+                                "name": "borrower",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 27380,
+                                "src": "741:8:26",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                                  "typeString": "contract GoodBorrower"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                                  "typeString": "contract GoodBorrower"
+                                }
+                              ],
+                              "id": 27392,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "733:7:26",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 27391,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "733:7:26",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 27394,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "733:17:26",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 27390,
+                          "name": "IFlashBorrower",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26467,
+                          "src": "718:14:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IFlashBorrower_$26467_$",
+                            "typeString": "type(contract IFlashBorrower)"
+                          }
+                        },
+                        "id": 27395,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "718:33:26",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      ],
+                      "expression": {
+                        "id": 27386,
+                        "name": "lender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27335,
+                        "src": "692:6:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                          "typeString": "contract SimpleFlashLender"
+                        }
+                      },
+                      "id": 27388,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "699:6:26",
+                      "memberName": "borrow",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26450,
+                      "src": "692:13:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_contract$_IFlashBorrower_$26467_$returns$__$",
+                        "typeString": "function (uint256,contract IFlashBorrower) external"
+                      }
+                    },
+                    "id": 27396,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "692:60:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 27397,
+                  "nodeType": "ExpressionStatement",
+                  "src": "692:60:26"
+                }
+              ]
+            },
+            "functionSelector": "39f5de96",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testLoan",
+            "nameLocation": "612:8:26",
+            "parameters": {
+              "id": 27376,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "620:2:26"
+            },
+            "returnParameters": {
+              "id": 27377,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "630:0:26"
+            },
+            "scope": 27472,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 27423,
+            "nodeType": "FunctionDefinition",
+            "src": "765:163:26",
+            "nodes": [],
+            "body": {
+              "id": 27422,
+              "nodeType": "Block",
+              "src": "799:129:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    27404
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 27404,
+                      "mutability": "mutable",
+                      "name": "borrower",
+                      "nameLocation": "822:8:26",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 27422,
+                      "src": "809:21:26",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                        "typeString": "contract GoodBorrower"
+                      },
+                      "typeName": {
+                        "id": 27403,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 27402,
+                          "name": "GoodBorrower",
+                          "nameLocations": [
+                            "809:12:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 27492,
+                          "src": "809:12:26"
+                        },
+                        "referencedDeclaration": 27492,
+                        "src": "809:12:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                          "typeString": "contract GoodBorrower"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 27409,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 27407,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "833:16:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_GoodBorrower_$27492_$",
+                        "typeString": "function () returns (contract GoodBorrower)"
+                      },
+                      "typeName": {
+                        "id": 27406,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 27405,
+                          "name": "GoodBorrower",
+                          "nameLocations": [
+                            "837:12:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 27492,
+                          "src": "837:12:26"
+                        },
+                        "referencedDeclaration": 27492,
+                        "src": "837:12:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                          "typeString": "contract GoodBorrower"
+                        }
+                      }
+                    },
+                    "id": 27408,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "833:18:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                      "typeString": "contract GoodBorrower"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "809:42:26"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "31303030",
+                        "id": 27413,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "875:10:26",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        "value": "1000"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "id": 27417,
+                                "name": "borrower",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 27404,
+                                "src": "910:8:26",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                                  "typeString": "contract GoodBorrower"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_GoodBorrower_$27492",
+                                  "typeString": "contract GoodBorrower"
+                                }
+                              ],
+                              "id": 27416,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "902:7:26",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 27415,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "902:7:26",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 27418,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "902:17:26",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 27414,
+                          "name": "IFlashBorrower",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26467,
+                          "src": "887:14:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IFlashBorrower_$26467_$",
+                            "typeString": "type(contract IFlashBorrower)"
+                          }
+                        },
+                        "id": 27419,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "887:33:26",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      ],
+                      "expression": {
+                        "id": 27410,
+                        "name": "lender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27335,
+                        "src": "861:6:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                          "typeString": "contract SimpleFlashLender"
+                        }
+                      },
+                      "id": 27412,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "868:6:26",
+                      "memberName": "borrow",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26450,
+                      "src": "861:13:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_contract$_IFlashBorrower_$26467_$returns$__$",
+                        "typeString": "function (uint256,contract IFlashBorrower) external"
+                      }
+                    },
+                    "id": 27420,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "861:60:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 27421,
+                  "nodeType": "ExpressionStatement",
+                  "src": "861:60:26"
+                }
+              ]
+            },
+            "functionSelector": "721f4137",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testLoanSuccess",
+            "nameLocation": "774:15:26",
+            "parameters": {
+              "id": 27400,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "789:2:26"
+            },
+            "returnParameters": {
+              "id": 27401,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "799:0:26"
+            },
+            "scope": 27472,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 27447,
+            "nodeType": "FunctionDefinition",
+            "src": "934:174:26",
+            "nodes": [],
+            "body": {
+              "id": 27446,
+              "nodeType": "Block",
+              "src": "981:127:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    27428
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 27428,
+                      "mutability": "mutable",
+                      "name": "borrower",
+                      "nameLocation": "1003:8:26",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 27446,
+                      "src": "991:20:26",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_BadBorrower_$27512",
+                        "typeString": "contract BadBorrower"
+                      },
+                      "typeName": {
+                        "id": 27427,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 27426,
+                          "name": "BadBorrower",
+                          "nameLocations": [
+                            "991:11:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 27512,
+                          "src": "991:11:26"
+                        },
+                        "referencedDeclaration": 27512,
+                        "src": "991:11:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_BadBorrower_$27512",
+                          "typeString": "contract BadBorrower"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 27433,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 27431,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "1014:15:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_BadBorrower_$27512_$",
+                        "typeString": "function () returns (contract BadBorrower)"
+                      },
+                      "typeName": {
+                        "id": 27430,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 27429,
+                          "name": "BadBorrower",
+                          "nameLocations": [
+                            "1018:11:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 27512,
+                          "src": "1018:11:26"
+                        },
+                        "referencedDeclaration": 27512,
+                        "src": "1018:11:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_BadBorrower_$27512",
+                          "typeString": "contract BadBorrower"
+                        }
+                      }
+                    },
+                    "id": 27432,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1014:17:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_BadBorrower_$27512",
+                      "typeString": "contract BadBorrower"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "991:40:26"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "31303030",
+                        "id": 27437,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1055:10:26",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        "value": "1000"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "id": 27441,
+                                "name": "borrower",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 27428,
+                                "src": "1090:8:26",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_BadBorrower_$27512",
+                                  "typeString": "contract BadBorrower"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_BadBorrower_$27512",
+                                  "typeString": "contract BadBorrower"
+                                }
+                              ],
+                              "id": 27440,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "1082:7:26",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 27439,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "1082:7:26",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 27442,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1082:17:26",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 27438,
+                          "name": "IFlashBorrower",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26467,
+                          "src": "1067:14:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IFlashBorrower_$26467_$",
+                            "typeString": "type(contract IFlashBorrower)"
+                          }
+                        },
+                        "id": 27443,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1067:33:26",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      ],
+                      "expression": {
+                        "id": 27434,
+                        "name": "lender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27335,
+                        "src": "1041:6:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                          "typeString": "contract SimpleFlashLender"
+                        }
+                      },
+                      "id": 27436,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1048:6:26",
+                      "memberName": "borrow",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26450,
+                      "src": "1041:13:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_contract$_IFlashBorrower_$26467_$returns$__$",
+                        "typeString": "function (uint256,contract IFlashBorrower) external"
+                      }
+                    },
+                    "id": 27444,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1041:60:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 27445,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1041:60:26"
+                }
+              ]
+            },
+            "functionSelector": "6d4ba2c8",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testFailRevertsIfNotReturned",
+            "nameLocation": "943:28:26",
+            "parameters": {
+              "id": 27424,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "971:2:26"
+            },
+            "returnParameters": {
+              "id": 27425,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "981:0:26"
+            },
+            "scope": 27472,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 27471,
+            "nodeType": "FunctionDefinition",
+            "src": "1114:185:26",
+            "nodes": [],
+            "body": {
+              "id": 27470,
+              "nodeType": "Block",
+              "src": "1162:137:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    27452
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 27452,
+                      "mutability": "mutable",
+                      "name": "borrower",
+                      "nameLocation": "1189:8:26",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 27470,
+                      "src": "1172:25:26",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MistakenBorrower_$27534",
+                        "typeString": "contract MistakenBorrower"
+                      },
+                      "typeName": {
+                        "id": 27451,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 27450,
+                          "name": "MistakenBorrower",
+                          "nameLocations": [
+                            "1172:16:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 27534,
+                          "src": "1172:16:26"
+                        },
+                        "referencedDeclaration": 27534,
+                        "src": "1172:16:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_MistakenBorrower_$27534",
+                          "typeString": "contract MistakenBorrower"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 27457,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 27455,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "1200:20:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_MistakenBorrower_$27534_$",
+                        "typeString": "function () returns (contract MistakenBorrower)"
+                      },
+                      "typeName": {
+                        "id": 27454,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 27453,
+                          "name": "MistakenBorrower",
+                          "nameLocations": [
+                            "1204:16:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 27534,
+                          "src": "1204:16:26"
+                        },
+                        "referencedDeclaration": 27534,
+                        "src": "1204:16:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_MistakenBorrower_$27534",
+                          "typeString": "contract MistakenBorrower"
+                        }
+                      }
+                    },
+                    "id": 27456,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1200:22:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MistakenBorrower_$27534",
+                      "typeString": "contract MistakenBorrower"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1172:50:26"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "31303030",
+                        "id": 27461,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1246:10:26",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        "value": "1000"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "id": 27465,
+                                "name": "borrower",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 27452,
+                                "src": "1281:8:26",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_MistakenBorrower_$27534",
+                                  "typeString": "contract MistakenBorrower"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_MistakenBorrower_$27534",
+                                  "typeString": "contract MistakenBorrower"
+                                }
+                              ],
+                              "id": 27464,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "1273:7:26",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 27463,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "1273:7:26",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 27466,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1273:17:26",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 27462,
+                          "name": "IFlashBorrower",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26467,
+                          "src": "1258:14:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IFlashBorrower_$26467_$",
+                            "typeString": "type(contract IFlashBorrower)"
+                          }
+                        },
+                        "id": 27467,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1258:33:26",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1000000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000000"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      ],
+                      "expression": {
+                        "id": 27458,
+                        "name": "lender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27335,
+                        "src": "1232:6:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                          "typeString": "contract SimpleFlashLender"
+                        }
+                      },
+                      "id": 27460,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1239:6:26",
+                      "memberName": "borrow",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26450,
+                      "src": "1232:13:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_contract$_IFlashBorrower_$26467_$returns$__$",
+                        "typeString": "function (uint256,contract IFlashBorrower) external"
+                      }
+                    },
+                    "id": 27468,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1232:60:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 27469,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1232:60:26"
+                }
+              ]
+            },
+            "functionSelector": "f0f9e308",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testFailRevertsIfSemiReturned",
+            "nameLocation": "1123:29:26",
+            "parameters": {
+              "id": 27448,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1152:2:26"
+            },
+            "returnParameters": {
+              "id": 27449,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1162:0:26"
+            },
+            "scope": 27472,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 27331,
+              "name": "DSTestPlus",
+              "nameLocations": [
+                "327:10:26"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 25157,
+              "src": "327:10:26"
+            },
+            "id": 27332,
+            "nodeType": "InheritanceSpecifier",
+            "src": "327:10:26"
+          }
+        ],
+        "canonicalName": "SimpleFlashLenderTest",
+        "contractDependencies": [
+          25409,
+          26451,
+          27492,
+          27512,
+          27534
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          27472,
+          25157,
+          1786
+        ],
+        "name": "SimpleFlashLenderTest",
+        "nameLocation": "302:21:26",
+        "scope": 27535,
+        "usedErrors": []
+      },
+      {
+        "id": 27492,
+        "nodeType": "ContractDefinition",
+        "src": "1304:156:26",
+        "nodes": [
+          {
+            "id": 27491,
+            "nodeType": "FunctionDefinition",
+            "src": "1332:126:26",
+            "nodes": [],
+            "body": {
+              "id": 27490,
+              "nodeType": "Block",
+              "src": "1407:51:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 27485,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1432:3:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 27486,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1436:6:26",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1432:10:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 27487,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27477,
+                        "src": "1444:6:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 27482,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27475,
+                        "src": "1417:5:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20_$25797",
+                          "typeString": "contract ERC20"
+                        }
+                      },
+                      "id": 27484,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1423:8:26",
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 25547,
+                      "src": "1417:14:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 27488,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1417:34:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 27489,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1417:34:26"
+                }
+              ]
+            },
+            "functionSelector": "21c77fd2",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeOnFlashLoan",
+            "nameLocation": "1341:18:26",
+            "parameters": {
+              "id": 27480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27475,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1366:5:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27491,
+                  "src": "1360:11:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC20_$25797",
+                    "typeString": "contract ERC20"
+                  },
+                  "typeName": {
+                    "id": 27474,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 27473,
+                      "name": "ERC20",
+                      "nameLocations": [
+                        "1360:5:26"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 25797,
+                      "src": "1360:5:26"
+                    },
+                    "referencedDeclaration": 25797,
+                    "src": "1360:5:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$25797",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27477,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1381:6:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27491,
+                  "src": "1373:14:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27476,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1373:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27479,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27491,
+                  "src": "1389:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27478,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1389:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1359:38:26"
+            },
+            "returnParameters": {
+              "id": 27481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1407:0:26"
+            },
+            "scope": 27492,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "GoodBorrower",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          27492
+        ],
+        "name": "GoodBorrower",
+        "nameLocation": "1313:12:26",
+        "scope": 27535,
+        "usedErrors": []
+      },
+      {
+        "id": 27512,
+        "nodeType": "ContractDefinition",
+        "src": "1462:143:26",
+        "nodes": [
+          {
+            "id": 27511,
+            "nodeType": "FunctionDefinition",
+            "src": "1489:114:26",
+            "nodes": [],
+            "body": {
+              "id": 27510,
+              "nodeType": "Block",
+              "src": "1557:46:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 27505,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1582:3:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 27506,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1586:6:26",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1582:10:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "hexValue": "30",
+                        "id": 27507,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1594:1:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "expression": {
+                        "id": 27502,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27495,
+                        "src": "1567:5:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20_$25797",
+                          "typeString": "contract ERC20"
+                        }
+                      },
+                      "id": 27504,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1573:8:26",
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 25547,
+                      "src": "1567:14:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 27508,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1567:29:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 27509,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1567:29:26"
+                }
+              ]
+            },
+            "functionSelector": "21c77fd2",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeOnFlashLoan",
+            "nameLocation": "1498:18:26",
+            "parameters": {
+              "id": 27500,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27495,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1523:5:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27511,
+                  "src": "1517:11:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC20_$25797",
+                    "typeString": "contract ERC20"
+                  },
+                  "typeName": {
+                    "id": 27494,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 27493,
+                      "name": "ERC20",
+                      "nameLocations": [
+                        "1517:5:26"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 25797,
+                      "src": "1517:5:26"
+                    },
+                    "referencedDeclaration": 25797,
+                    "src": "1517:5:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$25797",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27497,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27511,
+                  "src": "1530:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27496,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1530:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27499,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27511,
+                  "src": "1539:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27498,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1539:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1516:31:26"
+            },
+            "returnParameters": {
+              "id": 27501,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1557:0:26"
+            },
+            "scope": 27512,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "BadBorrower",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          27512
+        ],
+        "name": "BadBorrower",
+        "nameLocation": "1471:11:26",
+        "scope": 27535,
+        "usedErrors": []
+      },
+      {
+        "id": 27534,
+        "nodeType": "ContractDefinition",
+        "src": "1607:162:26",
+        "nodes": [
+          {
+            "id": 27533,
+            "nodeType": "FunctionDefinition",
+            "src": "1639:128:26",
+            "nodes": [],
+            "body": {
+              "id": 27532,
+              "nodeType": "Block",
+              "src": "1714:53:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 27525,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1739:3:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 27526,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1743:6:26",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1739:10:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 27529,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 27527,
+                          "name": "amount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 27517,
+                          "src": "1751:6:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "/",
+                        "rightExpression": {
+                          "hexValue": "32",
+                          "id": 27528,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1758:1:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_2_by_1",
+                            "typeString": "int_const 2"
+                          },
+                          "value": "2"
+                        },
+                        "src": "1751:8:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 27522,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27515,
+                        "src": "1724:5:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20_$25797",
+                          "typeString": "contract ERC20"
+                        }
+                      },
+                      "id": 27524,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1730:8:26",
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 25547,
+                      "src": "1724:14:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 27530,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1724:36:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 27531,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1724:36:26"
+                }
+              ]
+            },
+            "functionSelector": "21c77fd2",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeOnFlashLoan",
+            "nameLocation": "1648:18:26",
+            "parameters": {
+              "id": 27520,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27515,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1673:5:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27533,
+                  "src": "1667:11:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC20_$25797",
+                    "typeString": "contract ERC20"
+                  },
+                  "typeName": {
+                    "id": 27514,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 27513,
+                      "name": "ERC20",
+                      "nameLocations": [
+                        "1667:5:26"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 25797,
+                      "src": "1667:5:26"
+                    },
+                    "referencedDeclaration": 25797,
+                    "src": "1667:5:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$25797",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27517,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1688:6:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27533,
+                  "src": "1680:14:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27516,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1680:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27519,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27533,
+                  "src": "1696:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27518,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1696:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1666:38:26"
+            },
+            "returnParameters": {
+              "id": 27521,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1714:0:26"
+            },
+            "scope": 27534,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "MistakenBorrower",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          27534
+        ],
+        "name": "MistakenBorrower",
+        "nameLocation": "1616:16:26",
+        "scope": 27535,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 26
+}

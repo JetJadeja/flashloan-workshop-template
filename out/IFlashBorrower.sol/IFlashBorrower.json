@@ -1,0 +1,325 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ERC20",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total",
+          "type": "uint256"
+        }
+      ],
+      "name": "executeOnFlashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "executeOnFlashLoan(address,uint256,uint256)": "21c77fd2"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ERC20\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"}],\"name\":\"executeOnFlashLoan\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"executeOnFlashLoan(address,uint256,uint256)\":{\"params\":{\"amount\":\"The amount of funds that are borrowed.\",\"token\":\"The address of the ERC20 token that is being borrowed.\",\"total\":\"The amount that must be returned (including fees).\"}}},\"title\":\"Flash Borrower Interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"executeOnFlashLoan(address,uint256,uint256)\":{\"notice\":\"The function that is called by the flash lender contract when funds are borrowed.\"}},\"notice\":\"Interface for flash loan borrowers.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IFlashBorrower.sol\":\"IFlashBorrower\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/solmate/src/tokens/ERC20.sol\":{\"keccak256\":\"0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://57b3ab70cde374af1cf2c9888636e8de6cf660f087b1c9abd805e9271e19fa35\",\"dweb:/ipfs/QmNrLDBAHYFjpjSd12jerm1AdBkDqEYUUaXgnT854BUZ97\"]},\"src/interfaces/IFlashBorrower.sol\":{\"keccak256\":\"0xec387cb9f8cc545e0f52102c2a0f5a84d036da3557b2eb3f9e4b29558d9ecaa9\",\"urls\":[\"bzz-raw://2bf90b4e9abb1cd99788e710eef3f35733ee389c5d5dbc5a28fcf6f650db698a\",\"dweb:/ipfs/QmSkEfZwuR6Byk5oUdw6dCoJMZawFDwUMKe2nhiroJzhnS\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract ERC20",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "total",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "executeOnFlashLoan"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "executeOnFlashLoan(address,uint256,uint256)": {
+            "params": {
+              "amount": "The amount of funds that are borrowed.",
+              "token": "The address of the ERC20 token that is being borrowed.",
+              "total": "The amount that must be returned (including fees)."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "executeOnFlashLoan(address,uint256,uint256)": {
+            "notice": "The function that is called by the flash lender contract when funds are borrowed."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/IFlashBorrower.sol": "IFlashBorrower"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/solmate/src/tokens/ERC20.sol": {
+        "keccak256": "0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10",
+        "urls": [
+          "bzz-raw://57b3ab70cde374af1cf2c9888636e8de6cf660f087b1c9abd805e9271e19fa35",
+          "dweb:/ipfs/QmNrLDBAHYFjpjSd12jerm1AdBkDqEYUUaXgnT854BUZ97"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "src/interfaces/IFlashBorrower.sol": {
+        "keccak256": "0xec387cb9f8cc545e0f52102c2a0f5a84d036da3557b2eb3f9e4b29558d9ecaa9",
+        "urls": [
+          "bzz-raw://2bf90b4e9abb1cd99788e710eef3f35733ee389c5d5dbc5a28fcf6f650db698a",
+          "dweb:/ipfs/QmSkEfZwuR6Byk5oUdw6dCoJMZawFDwUMKe2nhiroJzhnS"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IFlashBorrower.sol",
+    "id": 26468,
+    "exportedSymbols": {
+      "ERC20": [
+        25797
+      ],
+      "IFlashBorrower": [
+        26467
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:580:23",
+    "nodes": [
+      {
+        "id": 26453,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 26454,
+        "nodeType": "ImportDirective",
+        "src": "39:34:23",
+        "nodes": [],
+        "absolutePath": "lib/solmate/src/tokens/ERC20.sol",
+        "file": "solmate/tokens/ERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26468,
+        "sourceUnit": 25798,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26467,
+        "nodeType": "ContractDefinition",
+        "src": "159:421:23",
+        "nodes": [
+          {
+            "id": 26466,
+            "nodeType": "FunctionDefinition",
+            "src": "497:81:23",
+            "nodes": [],
+            "documentation": {
+              "id": 26456,
+              "nodeType": "StructuredDocumentation",
+              "src": "190:302:23",
+              "text": "@notice The function that is called by the flash lender contract when funds are borrowed.\n @param token The address of the ERC20 token that is being borrowed.\n @param amount The amount of funds that are borrowed.\n @param total The amount that must be returned (including fees)."
+            },
+            "functionSelector": "21c77fd2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeOnFlashLoan",
+            "nameLocation": "506:18:23",
+            "parameters": {
+              "id": 26464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26459,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "531:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26466,
+                  "src": "525:11:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC20_$25797",
+                    "typeString": "contract ERC20"
+                  },
+                  "typeName": {
+                    "id": 26458,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26457,
+                      "name": "ERC20",
+                      "nameLocations": [
+                        "525:5:23"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 25797,
+                      "src": "525:5:23"
+                    },
+                    "referencedDeclaration": 25797,
+                    "src": "525:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$25797",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26461,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "546:6:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26466,
+                  "src": "538:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26460,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "538:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26463,
+                  "mutability": "mutable",
+                  "name": "total",
+                  "nameLocation": "562:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26466,
+                  "src": "554:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26462,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "554:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "524:44:23"
+            },
+            "returnParameters": {
+              "id": 26465,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "577:0:23"
+            },
+            "scope": 26467,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFlashBorrower",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 26455,
+          "nodeType": "StructuredDocumentation",
+          "src": "75:84:23",
+          "text": "@title Flash Borrower Interface\n @notice Interface for flash loan borrowers."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          26467
+        ],
+        "name": "IFlashBorrower",
+        "nameLocation": "169:14:23",
+        "scope": 26468,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 23
+}

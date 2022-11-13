@@ -1,0 +1,1205 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ERC20",
+          "name": "_TOKEN",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "TOKEN",
+      "outputs": [
+        {
+          "internalType": "contract ERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract IFlashBorrower",
+          "name": "borrower",
+          "type": "address"
+        }
+      ],
+      "name": "borrow",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60a060405234801561001057600080fd5b5060405161046d38038061046d83398101604081905261002f91610040565b6001600160a01b0316608052610070565b60006020828403121561005257600080fd5b81516001600160a01b038116811461006957600080fd5b9392505050565b6080516103c86100a56000396000818160550152818160ab0152818161012d0152818161016b01526101f301526103c86000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80634b3fd1481461003b57806382bfefc814610050575b600080fd5b61004e61004936600461033d565b610093565b005b6100777f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b03909116815260200160405180910390f35b6040516370a0823160e01b81523060048201526000907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906370a0823190602401602060405180830381865afa1580156100fa573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061011e9190610379565b90506101546001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001683856102bf565b6040516310e3bfe960e11b81526001600160a01b037f00000000000000000000000000000000000000000000000000000000000000008116600483015260248201859052604482018590528316906321c77fd290606401600060405180830381600087803b1580156101c557600080fd5b505af11580156101d9573d6000803e3d6000fd5b50506040516370a0823160e01b81523060048201528392507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031691506370a0823190602401602060405180830381865afa158015610243573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102679190610379565b10156102ba5760405162461bcd60e51b815260206004820152601d60248201527f426f72726f77657220646964206e6f742072657475726e2066756e647300000060448201526064015b60405180910390fd5b505050565b600060405163a9059cbb60e01b8152836004820152826024820152602060006044836000895af13d15601f3d11600160005114161716915050806103375760405162461bcd60e51b815260206004820152600f60248201526e1514905394d1915497d19052531151608a1b60448201526064016102b1565b50505050565b6000806040838503121561035057600080fd5b8235915060208301356001600160a01b038116811461036e57600080fd5b809150509250929050565b60006020828403121561038b57600080fd5b505191905056fea26469706673582212207cf12dba10c071497f10d5f2f29ab421217c2c59c9d48b77e8e2900c4e3aca7664736f6c63430008110033",
+    "sourceMap": "392:1533:22:-:0;;;964:112;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;1055:14:22;;;392:1533;;14:305:27;99:6;152:2;140:9;131:7;127:23;123:32;120:52;;;168:1;165;158:12;120:52;194:16;;-1:-1:-1;;;;;239:31:27;;229:42;;219:70;;285:1;282;275:12;219:70;308:5;14:305;-1:-1:-1;;;14:305:27:o;:::-;392:1533:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80634b3fd1481461003b57806382bfefc814610050575b600080fd5b61004e61004936600461033d565b610093565b005b6100777f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b03909116815260200160405180910390f35b6040516370a0823160e01b81523060048201526000907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906370a0823190602401602060405180830381865afa1580156100fa573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061011e9190610379565b90506101546001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001683856102bf565b6040516310e3bfe960e11b81526001600160a01b037f00000000000000000000000000000000000000000000000000000000000000008116600483015260248201859052604482018590528316906321c77fd290606401600060405180830381600087803b1580156101c557600080fd5b505af11580156101d9573d6000803e3d6000fd5b50506040516370a0823160e01b81523060048201528392507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031691506370a0823190602401602060405180830381865afa158015610243573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102679190610379565b10156102ba5760405162461bcd60e51b815260206004820152601d60248201527f426f72726f77657220646964206e6f742072657475726e2066756e647300000060448201526064015b60405180910390fd5b505050565b600060405163a9059cbb60e01b8152836004820152826024820152602060006044836000895af13d15601f3d11600160005114161716915050806103375760405162461bcd60e51b815260206004820152600f60248201526e1514905394d1915497d19052531151608a1b60448201526064016102b1565b50505050565b6000806040838503121561035057600080fd5b8235915060208301356001600160a01b038116811461036e57600080fd5b809150509250929050565b60006020828403121561038b57600080fd5b505191905056fea26469706673582212207cf12dba10c071497f10d5f2f29ab421217c2c59c9d48b77e8e2900c4e3aca7664736f6c63430008110033",
+    "sourceMap": "392:1533:22:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1330:593;;;;;;:::i;:::-;;:::i;:::-;;696:28;;;;;;;;-1:-1:-1;;;;;576:32:27;;;558:51;;546:2;531:18;696:28:22;;;;;;;1330:593;1478:30;;-1:-1:-1;;;1478:30:22;;1502:4;1478:30;;;558:51:27;1460:15:22;;1478:5;-1:-1:-1;;;;;1478:15:22;;;;531:18:27;;1478:30:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1460:48;-1:-1:-1;1585:45:22;-1:-1:-1;;;;;1585:5:22;:18;1612:8;1623:6;1585:18;:45::i;:::-;1702:50;;-1:-1:-1;;;1702:50:22;;-1:-1:-1;;;;;1730:5:22;1252:32:27;;1702:50:22;;;1234:51:27;1301:18;;;1294:34;;;1344:18;;;1337:34;;;1702:27:22;;;;;1207:18:27;;1702:50:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1841:30:22;;-1:-1:-1;;;1841:30:22;;1865:4;1841:30;;;558:51:27;1875:7:22;;-1:-1:-1;1841:5:22;-1:-1:-1;;;;;1841:15:22;;-1:-1:-1;1841:15:22;;531:18:27;;1841:30:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:41;;1833:83;;;;-1:-1:-1;;;1833:83:22;;1584:2:27;1833:83:22;;;1566:21:27;1623:2;1603:18;;;1596:30;1662:31;1642:18;;;1635:59;1711:18;;1833:83:22;;;;;;;;;1396:527;1330:593;;:::o;2950:1499:18:-;3062:12;3232:4;3226:11;-1:-1:-1;;;3355:17:18;3348:93;3488:2;3484:1;3465:17;3461:25;3454:37;3568:6;3563:2;3544:17;3540:26;3533:42;4370:2;4367:1;4363:2;4344:17;4341:1;4334:5;4327;4322:51;3891:16;3884:24;3878:2;3860:16;3857:24;3853:1;3849;3843:8;3840:15;3836:46;3833:76;3633:754;3622:765;;;4415:7;4407:35;;;;-1:-1:-1;;;4407:35:18;;1942:2:27;4407:35:18;;;1924:21:27;1981:2;1961:18;;;1954:30;-1:-1:-1;;;2000:18:27;;;1993:45;2055:18;;4407:35:18;1740:339:27;4407:35:18;3052:1397;2950:1499;;;:::o;14:378:27:-;106:6;114;167:2;155:9;146:7;142:23;138:32;135:52;;;183:1;180;173:12;135:52;206:23;;;-1:-1:-1;279:2:27;264:18;;251:32;-1:-1:-1;;;;;312:31:27;;302:42;;292:70;;358:1;355;348:12;292:70;381:5;371:15;;;14:378;;;;;:::o;828:184::-;898:6;951:2;939:9;930:7;926:23;922:32;919:52;;;967:1;964;957:12;919:52;-1:-1:-1;990:16:27;;828:184;-1:-1:-1;828:184:27:o",
+    "linkReferences": {},
+    "immutableReferences": {
+      "26387": [
+        {
+          "start": 85,
+          "length": 32
+        },
+        {
+          "start": 171,
+          "length": 32
+        },
+        {
+          "start": 301,
+          "length": 32
+        },
+        {
+          "start": 363,
+          "length": 32
+        },
+        {
+          "start": 499,
+          "length": 32
+        }
+      ]
+    }
+  },
+  "methodIdentifiers": {
+    "TOKEN()": "82bfefc8",
+    "borrow(uint256,address)": "4b3fd148"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ERC20\",\"name\":\"_TOKEN\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"TOKEN\",\"outputs\":[{\"internalType\":\"contract ERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"contract IFlashBorrower\",\"name\":\"borrower\",\"type\":\"address\"}],\"name\":\"borrow\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Jet Jadeja <jet@pentagon.xyz>\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Simple Flash Lender\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"TOKEN()\":{\"notice\":\"The address of the ERC20 contract.\"},\"borrow(uint256,address)\":{\"notice\":\"Borrow funds from the flash lender contract.\"},\"constructor\":{\"notice\":\"Set up the flash lender contract.\"}},\"notice\":\"Simple flash lender contract that allows liquidity providers to deposit and withdraw funds.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SimpleFlashLender.sol\":\"SimpleFlashLender\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/solmate/src/tokens/ERC20.sol\":{\"keccak256\":\"0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://57b3ab70cde374af1cf2c9888636e8de6cf660f087b1c9abd805e9271e19fa35\",\"dweb:/ipfs/QmNrLDBAHYFjpjSd12jerm1AdBkDqEYUUaXgnT854BUZ97\"]},\"lib/solmate/src/utils/SafeTransferLib.sol\":{\"keccak256\":\"0xbadf3d708cf532b12f75f78a1d423135954b63774a6d4ba15914a551d348db8a\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://88ac8256bd520d1b8e6f9c4ac9e8777bffdc4a6c8afb1a848f596665779a55b4\",\"dweb:/ipfs/QmXx7X1dxe6f5VM91vgQ5BA4r2eF97GWDcQDrgHytcvfjU\"]},\"src/SimpleFlashLender.sol\":{\"keccak256\":\"0x7d12785374d551163f43cd4cef65c610e4d2f533cd5d45800ee4c26c54bf5dfc\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://2c2d6e7d4214bd3af6ecd965a552351c114654d2aa6726f3850e850307b9f7fb\",\"dweb:/ipfs/QmW3rvavibznKVYRZ6GTJfFx9ywEunQ8dhRdKCA2boBzQM\"]},\"src/interfaces/IFlashBorrower.sol\":{\"keccak256\":\"0xec387cb9f8cc545e0f52102c2a0f5a84d036da3557b2eb3f9e4b29558d9ecaa9\",\"urls\":[\"bzz-raw://2bf90b4e9abb1cd99788e710eef3f35733ee389c5d5dbc5a28fcf6f650db698a\",\"dweb:/ipfs/QmSkEfZwuR6Byk5oUdw6dCoJMZawFDwUMKe2nhiroJzhnS\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract ERC20",
+              "name": "_TOKEN",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "TOKEN",
+          "outputs": [
+            {
+              "internalType": "contract ERC20",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "contract IFlashBorrower",
+              "name": "borrower",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "borrow"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "TOKEN()": {
+            "notice": "The address of the ERC20 contract."
+          },
+          "borrow(uint256,address)": {
+            "notice": "Borrow funds from the flash lender contract."
+          },
+          "constructor": {
+            "notice": "Set up the flash lender contract."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SimpleFlashLender.sol": "SimpleFlashLender"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/solmate/src/tokens/ERC20.sol": {
+        "keccak256": "0xcdfd8db76b2a3415620e4d18cc5545f3d50de792dbf2c3dd5adb40cbe6f94b10",
+        "urls": [
+          "bzz-raw://57b3ab70cde374af1cf2c9888636e8de6cf660f087b1c9abd805e9271e19fa35",
+          "dweb:/ipfs/QmNrLDBAHYFjpjSd12jerm1AdBkDqEYUUaXgnT854BUZ97"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "lib/solmate/src/utils/SafeTransferLib.sol": {
+        "keccak256": "0xbadf3d708cf532b12f75f78a1d423135954b63774a6d4ba15914a551d348db8a",
+        "urls": [
+          "bzz-raw://88ac8256bd520d1b8e6f9c4ac9e8777bffdc4a6c8afb1a848f596665779a55b4",
+          "dweb:/ipfs/QmXx7X1dxe6f5VM91vgQ5BA4r2eF97GWDcQDrgHytcvfjU"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "src/SimpleFlashLender.sol": {
+        "keccak256": "0x7d12785374d551163f43cd4cef65c610e4d2f533cd5d45800ee4c26c54bf5dfc",
+        "urls": [
+          "bzz-raw://2c2d6e7d4214bd3af6ecd965a552351c114654d2aa6726f3850e850307b9f7fb",
+          "dweb:/ipfs/QmW3rvavibznKVYRZ6GTJfFx9ywEunQ8dhRdKCA2boBzQM"
+        ],
+        "license": "Unlicense"
+      },
+      "src/interfaces/IFlashBorrower.sol": {
+        "keccak256": "0xec387cb9f8cc545e0f52102c2a0f5a84d036da3557b2eb3f9e4b29558d9ecaa9",
+        "urls": [
+          "bzz-raw://2bf90b4e9abb1cd99788e710eef3f35733ee389c5d5dbc5a28fcf6f650db698a",
+          "dweb:/ipfs/QmSkEfZwuR6Byk5oUdw6dCoJMZawFDwUMKe2nhiroJzhnS"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SimpleFlashLender.sol",
+    "id": 26452,
+    "exportedSymbols": {
+      "ERC20": [
+        25797
+      ],
+      "IFlashBorrower": [
+        26467
+      ],
+      "SafeTransferLib": [
+        25882
+      ],
+      "SimpleFlashLender": [
+        26451
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "38:1887:22",
+    "nodes": [
+      {
+        "id": 26375,
+        "nodeType": "PragmaDirective",
+        "src": "38:23:22",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 26376,
+        "nodeType": "ImportDirective",
+        "src": "77:43:22",
+        "nodes": [],
+        "absolutePath": "src/interfaces/IFlashBorrower.sol",
+        "file": "src/interfaces/IFlashBorrower.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26452,
+        "sourceUnit": 26468,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26377,
+        "nodeType": "ImportDirective",
+        "src": "121:34:22",
+        "nodes": [],
+        "absolutePath": "lib/solmate/src/tokens/ERC20.sol",
+        "file": "solmate/tokens/ERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26452,
+        "sourceUnit": 25798,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26378,
+        "nodeType": "ImportDirective",
+        "src": "170:43:22",
+        "nodes": [],
+        "absolutePath": "lib/solmate/src/utils/SafeTransferLib.sol",
+        "file": "solmate/utils/SafeTransferLib.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26452,
+        "sourceUnit": 25883,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26451,
+        "nodeType": "ContractDefinition",
+        "src": "392:1533:22",
+        "nodes": [
+          {
+            "id": 26383,
+            "nodeType": "UsingForDirective",
+            "src": "425:32:22",
+            "nodes": [],
+            "global": false,
+            "libraryName": {
+              "id": 26380,
+              "name": "SafeTransferLib",
+              "nameLocations": [
+                "431:15:22"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 25882,
+              "src": "431:15:22"
+            },
+            "typeName": {
+              "id": 26382,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 26381,
+                "name": "ERC20",
+                "nameLocations": [
+                  "451:5:22"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 25797,
+                "src": "451:5:22"
+              },
+              "referencedDeclaration": 25797,
+              "src": "451:5:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC20_$25797",
+                "typeString": "contract ERC20"
+              }
+            }
+          },
+          {
+            "id": 26387,
+            "nodeType": "VariableDeclaration",
+            "src": "696:28:22",
+            "nodes": [],
+            "constant": false,
+            "documentation": {
+              "id": 26384,
+              "nodeType": "StructuredDocumentation",
+              "src": "645:46:22",
+              "text": "@notice The address of the ERC20 contract."
+            },
+            "functionSelector": "82bfefc8",
+            "mutability": "immutable",
+            "name": "TOKEN",
+            "nameLocation": "719:5:22",
+            "scope": 26451,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ERC20_$25797",
+              "typeString": "contract ERC20"
+            },
+            "typeName": {
+              "id": 26386,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 26385,
+                "name": "ERC20",
+                "nameLocations": [
+                  "696:5:22"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 25797,
+                "src": "696:5:22"
+              },
+              "referencedDeclaration": 25797,
+              "src": "696:5:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC20_$25797",
+                "typeString": "contract ERC20"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 26399,
+            "nodeType": "FunctionDefinition",
+            "src": "964:112:22",
+            "nodes": [],
+            "body": {
+              "id": 26398,
+              "nodeType": "Block",
+              "src": "990:86:22",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 26396,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 26394,
+                      "name": "TOKEN",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 26387,
+                      "src": "1055:5:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ERC20_$25797",
+                        "typeString": "contract ERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 26395,
+                      "name": "_TOKEN",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 26391,
+                      "src": "1063:6:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ERC20_$25797",
+                        "typeString": "contract ERC20"
+                      }
+                    },
+                    "src": "1055:14:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$25797",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  "id": 26397,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1055:14:22"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 26388,
+              "nodeType": "StructuredDocumentation",
+              "src": "914:45:22",
+              "text": "@notice Set up the flash lender contract."
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 26392,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26391,
+                  "mutability": "mutable",
+                  "name": "_TOKEN",
+                  "nameLocation": "982:6:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26399,
+                  "src": "976:12:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC20_$25797",
+                    "typeString": "contract ERC20"
+                  },
+                  "typeName": {
+                    "id": 26390,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26389,
+                      "name": "ERC20",
+                      "nameLocations": [
+                        "976:5:22"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 25797,
+                      "src": "976:5:22"
+                    },
+                    "referencedDeclaration": 25797,
+                    "src": "976:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$25797",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "975:14:22"
+            },
+            "returnParameters": {
+              "id": 26393,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "990:0:22"
+            },
+            "scope": 26451,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 26450,
+            "nodeType": "FunctionDefinition",
+            "src": "1330:593:22",
+            "nodes": [],
+            "body": {
+              "id": 26449,
+              "nodeType": "Block",
+              "src": "1396:527:22",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    26409
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 26409,
+                      "mutability": "mutable",
+                      "name": "balance",
+                      "nameLocation": "1468:7:22",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 26449,
+                      "src": "1460:15:22",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 26408,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1460:7:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 26417,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 26414,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "1502:4:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                              "typeString": "contract SimpleFlashLender"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                              "typeString": "contract SimpleFlashLender"
+                            }
+                          ],
+                          "id": 26413,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1494:7:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 26412,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "1494:7:22",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 26415,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1494:13:22",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26410,
+                        "name": "TOKEN",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26387,
+                        "src": "1478:5:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20_$25797",
+                          "typeString": "contract ERC20"
+                        }
+                      },
+                      "id": 26411,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1484:9:22",
+                      "memberName": "balanceOf",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 25440,
+                      "src": "1478:15:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view external returns (uint256)"
+                      }
+                    },
+                    "id": 26416,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1478:30:22",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1460:48:22"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 26423,
+                            "name": "borrower",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26405,
+                            "src": "1612:8:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                              "typeString": "contract IFlashBorrower"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                              "typeString": "contract IFlashBorrower"
+                            }
+                          ],
+                          "id": 26422,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1604:7:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 26421,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "1604:7:22",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 26424,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1604:17:22",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 26425,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26402,
+                        "src": "1623:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26418,
+                        "name": "TOKEN",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26387,
+                        "src": "1585:5:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20_$25797",
+                          "typeString": "contract ERC20"
+                        }
+                      },
+                      "id": 26420,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1591:12:22",
+                      "memberName": "safeTransfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 25861,
+                      "src": "1585:18:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_ERC20_$25797_$_t_address_$_t_uint256_$returns$__$bound_to$_t_contract$_ERC20_$25797_$",
+                        "typeString": "function (contract ERC20,address,uint256)"
+                      }
+                    },
+                    "id": 26426,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1585:45:22",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26427,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1585:45:22"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 26431,
+                        "name": "TOKEN",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26387,
+                        "src": "1730:5:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20_$25797",
+                          "typeString": "contract ERC20"
+                        }
+                      },
+                      {
+                        "id": 26432,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26402,
+                        "src": "1737:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 26433,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26402,
+                        "src": "1745:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_ERC20_$25797",
+                          "typeString": "contract ERC20"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26428,
+                        "name": "borrower",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26405,
+                        "src": "1702:8:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                          "typeString": "contract IFlashBorrower"
+                        }
+                      },
+                      "id": 26430,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1711:18:22",
+                      "memberName": "executeOnFlashLoan",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26466,
+                      "src": "1702:27:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_contract$_ERC20_$25797_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (contract ERC20,uint256,uint256) external"
+                      }
+                    },
+                    "id": 26434,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1702:50:22",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26435,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1702:50:22"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 26445,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "id": 26441,
+                                  "name": "this",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": -28,
+                                  "src": "1865:4:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                                    "typeString": "contract SimpleFlashLender"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_contract$_SimpleFlashLender_$26451",
+                                    "typeString": "contract SimpleFlashLender"
+                                  }
+                                ],
+                                "id": 26440,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "1857:7:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_address_$",
+                                  "typeString": "type(address)"
+                                },
+                                "typeName": {
+                                  "id": 26439,
+                                  "name": "address",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "1857:7:22",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 26442,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1857:13:22",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "id": 26437,
+                              "name": "TOKEN",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 26387,
+                              "src": "1841:5:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_ERC20_$25797",
+                                "typeString": "contract ERC20"
+                              }
+                            },
+                            "id": 26438,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1847:9:22",
+                            "memberName": "balanceOf",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 25440,
+                            "src": "1841:15:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                              "typeString": "function (address) view external returns (uint256)"
+                            }
+                          },
+                          "id": 26443,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1841:30:22",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "id": 26444,
+                          "name": "balance",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26409,
+                          "src": "1875:7:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1841:41:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "426f72726f77657220646964206e6f742072657475726e2066756e6473",
+                        "id": 26446,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1884:31:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_fdac3aaf66190704027111475194abfc36b119bf5ac94eb34a467a7e54e6bad5",
+                          "typeString": "literal_string \"Borrower did not return funds\""
+                        },
+                        "value": "Borrower did not return funds"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_fdac3aaf66190704027111475194abfc36b119bf5ac94eb34a467a7e54e6bad5",
+                          "typeString": "literal_string \"Borrower did not return funds\""
+                        }
+                      ],
+                      "id": 26436,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1833:7:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 26447,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1833:83:22",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26448,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1833:83:22"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 26400,
+              "nodeType": "StructuredDocumentation",
+              "src": "1269:56:22",
+              "text": "@notice Borrow funds from the flash lender contract."
+            },
+            "functionSelector": "4b3fd148",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "borrow",
+            "nameLocation": "1339:6:22",
+            "parameters": {
+              "id": 26406,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26402,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1354:6:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26450,
+                  "src": "1346:14:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26401,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1346:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26405,
+                  "mutability": "mutable",
+                  "name": "borrower",
+                  "nameLocation": "1377:8:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26450,
+                  "src": "1362:23:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                    "typeString": "contract IFlashBorrower"
+                  },
+                  "typeName": {
+                    "id": 26404,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26403,
+                      "name": "IFlashBorrower",
+                      "nameLocations": [
+                        "1362:14:22"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26467,
+                      "src": "1362:14:22"
+                    },
+                    "referencedDeclaration": 26467,
+                    "src": "1362:14:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFlashBorrower_$26467",
+                      "typeString": "contract IFlashBorrower"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1345:41:22"
+            },
+            "returnParameters": {
+              "id": 26407,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1396:0:22"
+            },
+            "scope": 26451,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "SimpleFlashLender",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 26379,
+          "nodeType": "StructuredDocumentation",
+          "src": "215:177:22",
+          "text": "@title Simple Flash Lender\n @author Jet Jadeja <jet@pentagon.xyz>\n @notice Simple flash lender contract that allows liquidity providers to deposit and withdraw funds."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          26451
+        ],
+        "name": "SimpleFlashLender",
+        "nameLocation": "401:17:22",
+        "scope": 26452,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 22
+}
