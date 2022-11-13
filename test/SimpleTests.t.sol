@@ -12,12 +12,12 @@ import {DSTestPlus} from "solmate/test/utils/DSTestPlus.sol";
 
 
 contract SimpleTests is DSTestPlus {
-    IFlashLender lender;
+    ISimpleFlashLender lender;
     MockERC20 token;
 
     function setUp() public {
         token = new MockERC20("Test Token", "TEST", 18);
-        lender = IFlashLender(address(new FlashLender(ERC20(address(token)))));
+        lender = ISimpleFlashLender(address(new FlashLender(ERC20(address(token)), 0)));
 
         token.mint(address(lender), 1000 ether);
     }
